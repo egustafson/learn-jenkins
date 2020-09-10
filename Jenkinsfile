@@ -15,6 +15,7 @@ pipeline {
                 sh 'docker version'
                 sh 'docker images'
                 sh 'python --version'
+                sh 'make package'
             }
         }
     }
