@@ -12,8 +12,6 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'cat /etc/group'
-                sh 'grep docker /etc/passwd'
                 sh 'docker version'
                 sh 'docker images'
                 sh 'python --version'
