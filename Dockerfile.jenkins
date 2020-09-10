@@ -1,2 +1,8 @@
 FROM python:3
-RUN apt-get update && apt-get install -y docker.io
+#RUN apt-get update && apt-get install -y docker.io
+
+ENV DOCKERVER=19.03.8
+RUN curl -fsSLO https://download.docker.com/linux/static/stable/x86_64/docker-${DOCKERVER}.tgz \
+      && tar -xzf docker-${DOCKERVER}.tgz --strip 1 -C /usr/local/bin docker/docker \
+      && rm docker-${DOCKERVER}.tgz
+
